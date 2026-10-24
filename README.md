@@ -412,7 +412,7 @@ Contributions and suggestions are welcome.
 
 ## 📄 License
 
-No license has been specified in this repository's README. Add an appropriate license file and update this section before distributing the project for reuse.
+No license .
 
 ---
 
