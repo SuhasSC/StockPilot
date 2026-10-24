@@ -1,0 +1,38 @@
+
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+
+# Environment secrets
+.env.*
+!.env.example
+!.env.template
+
+# Frontend dependencies and builds
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local backups and logs
+backups/
+*.log
+# Local project backups
+frontend_empty_files_backup/
+frontend_source_backup_*/
+voice_feature_backup/
+# Local logs
+logs/
+# Local vector index (include only if intentionally required)
+vector_store/

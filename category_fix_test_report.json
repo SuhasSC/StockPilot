@@ -1,0 +1,44 @@
+﻿[
+    {
+        "Language":  "French",
+        "Status":  "PASS",
+        "Method":  "groq_llm",
+        "ProductIDs":  "P1001, P1002",
+        "GeneratedQuery":  "{\"category\":{\"$eq\":\"Electronics\"}}"
+    },
+    {
+        "Language":  "Spanish",
+        "Status":  "PASS",
+        "Method":  "groq_llm",
+        "ProductIDs":  "P1001, P1002",
+        "GeneratedQuery":  "{\"category\":{\"$eq\":\"Electronics\"}}"
+    },
+    {
+        "Language":  "German",
+        "Status":  "PASS",
+        "Method":  "groq_llm",
+        "ProductIDs":  "P1001, P1002",
+        "GeneratedQuery":  "{\"category\":{\"$eq\":\"Electronics\"}}"
+    },
+    {
+        "Language":  "Arabic",
+        "Status":  "PASS",
+        "Method":  "groq_llm",
+        "ProductIDs":  "P1001, P1002",
+        "GeneratedQuery":  "{\"category\":{\"$eq\":\"Electronics\"}}"
+    },
+    {
+        "Language":  "Chinese",
+        "Status":  "PASS",
+        "Method":  "groq_llm",
+        "ProductIDs":  "P1001, P1002",
+        "GeneratedQuery":  "{\"category\":{\"$eq\":\"Electronics\"}}"
+    },
+    {
+        "Language":  "Japanese",
+        "Status":  "PASS",
+        "Method":  "groq_llm",
+        "ProductIDs":  "P1001, P1002",
+        "GeneratedQuery":  "{\"category\":{\"$eq\":\"Electronics\"}}"
+    }
+]

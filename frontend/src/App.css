@@ -1,0 +1,1121 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root{font-family:'DM Sans',sans-serif;color:#e8edf7;background:#0b0e14;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-optical-sizing:auto;font-weight:400}
+*{box-sizing:border-box}body{margin:0;min-width:320px;min-height:100vh}button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.65;cursor:wait}
+.app-shell{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:245px;background:#0e121b;border-right:1px solid #202633;padding:27px 16px 18px;display:flex;flex-direction:column;z-index:2}
+.brand{display:flex;align-items:center;gap:11px;padding:0 9px 36px}.brand-mark{height:40px;width:40px;display:grid;place-items:center;background:linear-gradient(145deg,#7c5cff,#4b8dff);border-radius:12px;color:white;box-shadow:0 7px 24px #6655ff38}.brand strong{font:700 18px 'Space Grotesk',sans-serif;display:block;letter-spacing:-.4px}.brand span{display:block;font-size:9px;letter-spacing:1.15px;color:#7f8aa0;margin-top:3px}
+.workspace-label{font-size:10px;font-weight:700;letter-spacing:1.5px;color:#626e82;padding:0 12px 12px}.nav-list{display:grid;gap:5px}.nav-item{height:44px;display:flex;align-items:center;gap:12px;padding:0 12px;color:#8f9bb0;background:transparent;border:1px solid transparent;border-radius:9px;text-align:left;font-size:13px}.nav-item span:nth-child(2){flex:1}.nav-item.active{color:#c4b8ff;background:#7457ff18;border-color:#7d66ff2b}.nav-item.active svg{color:#a795ff}.nav-ai{font-size:9px;font-weight:700;color:#a995ff;background:#7055f326;padding:3px 5px;border-radius:4px}
+.sidebar-bottom{margin-top:auto}.connection-card{background:#151b27;border:1px solid #242d3d;border-radius:11px;padding:13px;margin-bottom:18px}.connection-title{font-size:9px;letter-spacing:1px;color:#78869b;display:flex;align-items:center;gap:7px}.connection-card>strong{display:block;font-size:13px;margin:10px 0 4px}.connection-card>span{font-size:10px;color:#7f8ca0}.status-dot{display:inline-block;width:7px;height:7px;background:#37d69a;border-radius:50%;box-shadow:0 0 9px #37d69a60;flex-shrink:0}.status-dot.offline{background:#f26c79;box-shadow:none}.sidebar-footer{display:flex;align-items:center;gap:8px;color:#67748a;font-size:10px;padding:0 8px}
+.main-content{margin-left:245px;min-height:100vh}.topbar{height:68px;border-bottom:1px solid #202633;display:flex;align-items:center;justify-content:space-between;padding:0 38px;background:#0d1119}.breadcrumb{display:flex;align-items:center;gap:9px;color:#738098;font-size:12px}.breadcrumb strong{color:#d9e0ed;font-weight:500}.topbar-right{display:flex;align-items:center;gap:16px}.live-pill{display:flex;align-items:center;gap:7px;border:1px solid #27372f;color:#78d8ac;background:#11231c;border-radius:20px;padding:6px 10px;font-size:9px;font-weight:700;letter-spacing:.5px}.icon-button{display:grid;place-items:center;background:#171d28;border:1px solid #293244;border-radius:8px;color:#aab5c8;width:34px;height:34px}.avatar{height:32px;width:32px;border-radius:10px;background:#30284b;border:1px solid #5b4c87;color:#c5b8ff;display:grid;place-items:center;font-size:11px;font-weight:700}
+.page-content{max-width:1450px;margin:auto;padding:35px 38px 20px}.welcome-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:27px;gap:20px}.eyebrow{display:flex;align-items:center;gap:7px;color:#a694ff;font-size:10px;letter-spacing:1.25px;font-weight:700}.welcome-row h1{font:600 clamp(25px,3vw,34px) 'Space Grotesk',sans-serif;letter-spacing:-1.1px;margin:10px 0 8px;color:#f0f3fb}.welcome-row p{margin:0;color:#8995aa;font-size:13px}.secondary-button{display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid #2c3546;background:#151b26;color:#c6cfde;border-radius:8px;padding:10px 13px;font-size:11px;font-weight:600;white-space:nowrap}.secondary-button:hover{border-color:#7663e8}.secondary-button.small{padding:8px 10px}
+.query-card{background:linear-gradient(115deg,#17192a,#151c29 70%,#182233);border:1px solid #39344f;border-radius:14px;padding:20px;margin-bottom:23px;box-shadow:0 12px 40px #00000015}.query-card-top{display:flex;align-items:center;gap:11px;margin-bottom:17px}.ai-icon{height:39px;width:39px;display:grid;place-items:center;background:#7b5dff24;border:1px solid #7c65ff4a;border-radius:11px;color:#b5a6ff}.query-title strong{display:block;font-size:14px;font-weight:600}.query-title span{display:block;color:#8993a9;font-size:10px;margin-top:4px}.powered-pill{margin-left:auto;display:flex;align-items:center;gap:5px;color:#b5a6ff;background:#7b5dff1d;border:1px solid #7c65ff35;padding:6px 8px;border-radius:5px;font-size:9px;letter-spacing:.5px;font-weight:700}
+.query-form{height:51px;display:flex;align-items:center;gap:12px;background:#0d111a;border:1px solid #30394c;border-radius:9px;padding:5px 6px 5px 14px}.query-form:focus-within{border-color:#8170f4;box-shadow:0 0 0 3px #7b5dff16}.query-search-icon{color:#78859c;flex-shrink:0}.query-form input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:#edf0f8;font-size:12px}.query-form input::placeholder{color:#68758b}.run-button{display:flex;align-items:center;justify-content:center;gap:8px;height:38px;padding:0 15px;border:0;border-radius:7px;background:linear-gradient(110deg,#8264ff,#6256e8);color:white;font-size:11px;font-weight:700;box-shadow:0 4px 15px #715cff30}.run-button:hover{filter:brightness(1.1)}.suggestion-row{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:14px}.suggestion-row>span{font-size:9px;color:#6f7c91;letter-spacing:1px;font-weight:700;margin-right:3px}.suggestion-row button{border:1px solid #303448;background:#1b2030;color:#aab4c8;border-radius:6px;padding:7px 9px;font-size:10px}.suggestion-row button:hover{color:#d5cbff;border-color:#6959ba}
+.stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:23px}.stat-card{background:#121721;border:1px solid #242c3b;border-radius:11px;padding:17px 17px 16px;min-width:0}.stat-icon{height:35px;width:35px;display:grid;place-items:center;border-radius:9px;margin-bottom:16px}.stat-icon.blue{color:#7db4ff;background:#2b5fa526}.stat-icon.amber{color:#ffc76c;background:#8e63211f}.stat-icon.violet{color:#b5a0ff;background:#7051d72a}.stat-icon.green{color:#67dfb0;background:#247b5b26}.stat-label{font-size:9px;letter-spacing:.8px;color:#8b98ad;font-weight:700}.stat-value{font:600 clamp(22px,2.3vw,29px) 'Space Grotesk',sans-serif;letter-spacing:-.7px;margin:8px 0 5px;color:#edf1fa;overflow-wrap:anywhere}.stat-note{font-size:10px;color:#748198}
+.panel{background:#121721;border:1px solid #242c3b;border-radius:12px;margin-bottom:22px;overflow:hidden}.panel-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 21px;border-bottom:1px solid #242c3b}.panel-kicker{display:flex;align-items:center;gap:6px;color:#8c9ab0;font-size:9px;letter-spacing:1px;font-weight:700}.panel-header h2{font:600 17px 'Space Grotesk',sans-serif;letter-spacing:-.3px;margin:8px 0 5px}.panel-header p{font-size:11px;color:#8490a5;margin:0}.count-pill{display:inline-flex;align-items:center;border:1px solid #333b4c;background:#1b2230;color:#aebbd0;padding:5px 8px;border-radius:6px;font-size:10px;font-weight:600;margin-left:7px;white-space:nowrap}
+.table-wrap{width:100%;overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:left;white-space:nowrap}th{background:#151b26;color:#7f8ca2;text-transform:uppercase;font-size:9px;letter-spacing:.7px;font-weight:700;padding:13px 21px;border-bottom:1px solid #272f3e}td{padding:15px 21px;border-bottom:1px solid #202735;color:#c5cedd;font-size:11px}tbody tr:last-child td{border-bottom:0}tbody tr:hover{background:#191f2b}.category-chip{background:#24304a;color:#9fc5ff;padding:5px 8px;border-radius:5px;font-size:10px}.stock-warning{display:inline-flex;align-items:center;gap:5px;color:#ffbd68;background:#50371e55;border:1px solid #7b512d55;border-radius:5px;padding:5px 7px;font-size:10px}
+.generated-query{margin:17px 20px 19px;background:#0b1018;border:1px solid #2a3344;border-radius:9px;overflow:hidden}.code-heading{display:flex;align-items:center;gap:7px;padding:11px 13px;color:#99a8bf;background:#151c28;border-bottom:1px solid #293244;font-size:9px;letter-spacing:.6px;font-weight:700}.code-heading span{margin-left:auto;color:#a99aff;background:#6b55e31b;padding:4px 6px;border-radius:4px}.generated-query pre{margin:0;padding:15px;color:#9bdab9;font:12px/1.7 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}.collection-label{border-top:1px solid #252e3d;padding:10px 13px;color:#7e8ca1;font-size:10px}.collection-label strong{color:#d4dced}.similar-examples{display:flex;flex-wrap:wrap;gap:8px;padding:0 20px 17px;align-items:center}.similar-examples>strong{display:flex;align-items:center;gap:6px;width:100%;font-size:10px;color:#a8b3c8}.similar-examples>span{font-size:10px;color:#a3aec1;background:#1b2230;border:1px solid #2b3546;border-radius:5px;padding:7px 9px}.similar-examples small{color:#a99aff;margin-left:5px}
+.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:34px;color:#75839a}.empty-state strong{font-size:12px;color:#c1cada}.empty-state span{font-size:11px}.error-banner{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding:12px 14px;border:1px solid #713a45;background:#321c25;color:#ffb5bd;border-radius:8px;font-size:12px}.error-banner span{flex:1}.error-banner button{border:0;background:transparent;color:inherit}.page-footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#68768b;font-size:10px;padding:5px 2px 15px}.page-footer>span:last-child{display:flex;align-items:center;gap:7px}.footer-dot{color:#46536a;padding:0 4px}.spin{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:1100px){.sidebar{width:205px}.main-content{margin-left:205px}.page-content{padding:28px 23px}.topbar{padding:0 23px}.stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.sidebar{position:static;width:100%;height:auto;padding:14px 14px 10px;border-right:0;border-bottom:1px solid #202633}.brand{padding:0 5px 15px}.workspace-label,.sidebar-bottom{display:none}.nav-list{display:flex;overflow-x:auto}.nav-item{flex-shrink:0;height:38px;padding:0 10px}.main-content{margin-left:0}.topbar{height:55px;padding:0 15px}.page-content{padding:23px 14px}.welcome-row{align-items:flex-start}.welcome-row h1{font-size:25px}.welcome-row .secondary-button{font-size:0;padding:10px}.welcome-row .secondary-button svg{width:17px;height:17px}.query-card{padding:14px}.powered-pill{display:none}.query-form{height:auto;min-height:50px;flex-wrap:wrap;padding:8px}.query-form input{min-width:calc(100% - 40px);height:30px}.run-button{width:100%}.stats-grid{gap:9px}.stat-card{padding:13px}.stat-value{font-size:23px}.panel-header{padding:16px;align-items:flex-start}.panel-header h2{font-size:15px}.panel-header p{max-width:230px;line-height:1.5}.live-pill{display:none}.breadcrumb{font-size:11px}}
+
+/* Multilingual voice input */
+.voice-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 8px}
+.voice-controls label{display:flex;align-items:center;gap:6px;color:#9ba8bd;font-size:11px}
+.voice-controls select{background:#0d111a;border:1px solid #30394c;border-radius:7px;color:#e1e7f2;padding:9px 12px;font:inherit;font-size:11px;min-width:125px}
+.mic-button{display:flex;align-items:center;justify-content:center;gap:8px;background:#24203b;border:1px solid #5c4b9e;color:#c6baff;border-radius:8px;padding:10px 13px;font-size:11px;font-weight:700}
+.mic-button:hover{border-color:#a391ff;background:#302751}
+.mic-button.recording{background:#431f2a;border-color:#a64e61;color:#ffb9c4;animation:mic-pulse 1.5s infinite}
+.recording-indicator{display:flex;align-items:center;gap:7px;font-size:10px;color:#ff9cae}
+.recording-indicator span{height:7px;width:7px;border-radius:50%;background:#ff657e;animation:mic-pulse 1s infinite}
+.voice-message{display:flex;align-items:flex-start;gap:7px;min-height:0;color:#91a2ba;font-size:11px;line-height:1.5;margin-bottom:8px}
+.voice-message:empty{display:none}
+.voice-message svg{flex-shrink:0;margin-top:1px;color:#a998ff}
+.voice-message.voice-error{color:#ffb5bd}
+@keyframes mic-pulse{0%,100%{opacity:1}50%{opacity:.55}}
+@media(max-width:720px){.voice-controls{gap:8px}.voice-controls label{width:100%}.voice-controls select{flex:1}.mic-button{flex:1}}
+
+
+/* StockPilot analytics chart */
+.analytics-chart {
+  margin: 22px 0;
+  padding: 20px;
+  border: 1px solid #263244;
+  border-radius: 14px;
+  background: rgba(20, 27, 39, 0.7);
+}
+.analytics-chart-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.analytics-chart-title strong { color: #e8edf7; }
+.analytics-chart-title span { color: #8ea3c3; font-size: 12px; }
+.revenue-bar-row {
+  display: grid;
+  grid-template-columns: minmax(65px, 95px) minmax(50px, 1fr) minmax(90px, 125px);
+  gap: 12px;
+  align-items: center;
+  margin: 12px 0;
+  font-size: 12px;
+}
+.revenue-bar-label { color: #a9bad5; overflow-wrap: anywhere; }
+.revenue-bar-track {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #252e40;
+}
+.revenue-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6c63ff, #a78bfa);
+}
+.revenue-bar-row strong {
+  text-align: right;
+  color: #e5eaff;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 640px) {
+  .revenue-bar-row { grid-template-columns: 58px minmax(30px, 1fr) 88px; gap: 7px; }
+  .revenue-bar-row strong { font-size: 11px; }
+}
+\n
+.analytics-kpi-grid { margin-top: 18px; }
+
+
+.category-chart-row {
+  margin: 17px 0 21px;
+}
+.category-chart-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 9px;
+  color: #a9bad5;
+  font-size: 12px;
+}
+.category-chart-heading strong { color: #e8edf7; }
+.category-chart-price {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+  color: #8ea3c3;
+  font-size: 12px;
+}
+.category-chart-price strong {
+  color: #e5eaff;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================
+   STOCKPILOT — CINEMATIC AI COMMAND CENTER THEME
+   Visual-only overrides. Existing application logic preserved.
+   ========================================================== */
+
+:root {
+  color-scheme: dark;
+  --sp-bg: #050911;
+  --sp-panel: #0a1421;
+  --sp-panel-alt: #0d1b2b;
+  --sp-border: rgba(75, 210, 255, 0.18);
+  --sp-cyan: #42d9ff;
+  --sp-cyan-bright: #8cecff;
+  --sp-amber: #ffbd59;
+  --sp-text: #e7f2ff;
+  --sp-muted: #91a6bc;
+  --sp-glow: 0 0 22px rgba(44, 198, 255, 0.09);
+}
+
+html {
+  background: var(--sp-bg);
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 12% 0%, rgba(0, 151, 211, 0.11), transparent 36%),
+    radial-gradient(ellipse at 90% 85%, rgba(255, 174, 64, 0.055), transparent 30%),
+    var(--sp-bg);
+  color: var(--sp-text);
+}
+
+body, button, input, textarea, select {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: rgba(66, 217, 255, 0.3);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sp-cyan) !important;
+  outline-offset: 3px;
+}
+
+/* Main surfaces */
+.app-shell,
+.app-container,
+.main-content,
+.dashboard-content,
+.content-area {
+  background-color: transparent;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #091523 0%, #060d17 100%);
+  border-right: 1px solid var(--sp-border);
+  box-shadow: 8px 0 32px rgba(0, 0, 0, 0.16);
+}
+
+.topbar,
+.top-bar,
+.header,
+.dashboard-header {
+  background: rgba(7, 15, 26, 0.78);
+  border-bottom: 1px solid var(--sp-border);
+  backdrop-filter: blur(14px);
+}
+
+/* Branding */
+.brand,
+.brand-name,
+.logo-text,
+h1, h2, h3 {
+  color: var(--sp-text);
+}
+
+.brand-mark,
+.logo-mark,
+.logo-icon {
+  border: 1px solid rgba(66, 217, 255, 0.45);
+  box-shadow: 0 0 20px rgba(66, 217, 255, 0.18);
+}
+
+/* Navigation */
+.sidebar a,
+.sidebar button,
+.nav-item,
+.nav-link {
+  transition: background 180ms ease, border-color 180ms ease,
+              color 180ms ease, transform 180ms ease;
+}
+
+.sidebar a:hover,
+.sidebar button:hover,
+.nav-item:hover,
+.nav-link:hover {
+  background: rgba(66, 217, 255, 0.075);
+  color: var(--sp-cyan-bright);
+}
+
+.sidebar .active,
+.sidebar a.active,
+.nav-item.active,
+.nav-link.active,
+[aria-current="page"] {
+  color: var(--sp-cyan-bright);
+  background: linear-gradient(90deg, rgba(66, 217, 255, 0.13), rgba(66, 217, 255, 0.025));
+  border-color: rgba(66, 217, 255, 0.35);
+}
+
+/* Panels and cards */
+.card,
+.panel,
+.stat-card,
+.metric-card,
+.chart-card,
+.query-card,
+.analytics-card,
+.table-card,
+.widget,
+.section-card {
+  background: linear-gradient(145deg, rgba(13, 27, 43, 0.96), rgba(7, 15, 26, 0.97));
+  border: 1px solid var(--sp-border);
+  box-shadow: var(--sp-glow);
+  border-radius: 14px;
+  transition: border-color 180ms ease, box-shadow 180ms ease,
+              transform 180ms ease;
+}
+
+.card:hover,
+.panel:hover,
+.stat-card:hover,
+.metric-card:hover,
+.chart-card:hover,
+.query-card:hover,
+.analytics-card:hover,
+.widget:hover,
+.section-card:hover {
+  border-color: rgba(66, 217, 255, 0.34);
+  box-shadow: 0 0 28px rgba(44, 198, 255, 0.075);
+}
+
+/* Typography */
+.eyebrow,
+.section-label,
+.overline,
+.kicker {
+  color: var(--sp-cyan);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+p,
+.subtitle,
+.description,
+.muted,
+.helper-text {
+  color: var(--sp-muted);
+}
+
+.stat-value,
+.metric-value,
+.kpi-value,
+.big-number {
+  color: var(--sp-cyan-bright);
+  text-shadow: 0 0 18px rgba(66, 217, 255, 0.12);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label,
+.metric-label,
+.kpi-label {
+  color: var(--sp-muted);
+}
+
+/* Buttons */
+button,
+.button,
+.run-button,
+.primary-button {
+  transition: border-color 180ms ease, background 180ms ease,
+              box-shadow 180ms ease, transform 180ms ease;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.run-button,
+.primary-button,
+button[type="submit"] {
+  border-color: rgba(66, 217, 255, 0.45);
+}
+
+.run-button:hover,
+.primary-button:hover,
+button[type="submit"]:hover {
+  box-shadow: 0 0 22px rgba(66, 217, 255, 0.17);
+}
+
+/* Inputs and natural-language query area */
+input,
+textarea,
+select {
+  color: var(--sp-text);
+  background: rgba(3, 9, 17, 0.8);
+  border-color: rgba(115, 158, 190, 0.25);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #71879e;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: rgba(66, 217, 255, 0.35);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--sp-cyan);
+  box-shadow: 0 0 0 3px rgba(66, 217, 255, 0.09);
+  outline: none;
+}
+
+/* Tables */
+table {
+  border-color: var(--sp-border);
+}
+
+thead,
+thead tr,
+.table-header {
+  background: rgba(66, 217, 255, 0.055);
+}
+
+th {
+  color: var(--sp-cyan-bright);
+  border-bottom-color: var(--sp-border);
+  font-weight: 600;
+}
+
+td {
+  border-bottom-color: rgba(115, 158, 190, 0.11);
+}
+
+tbody tr {
+  transition: background 150ms ease;
+}
+
+tbody tr:hover {
+  background: rgba(66, 217, 255, 0.045);
+}
+
+/* Status indicators */
+.status-dot,
+.connection-dot,
+.online-indicator {
+  box-shadow: 0 0 10px currentColor;
+}
+
+.badge,
+.pill,
+.status-badge {
+  border-color: var(--sp-border);
+}
+
+/* Charts and icons */
+svg {
+  max-width: 100%;
+}
+
+.recharts-cartesian-grid line {
+  stroke: rgba(145, 166, 188, 0.13);
+}
+
+.recharts-text,
+.recharts-legend-item-text {
+  fill: var(--sp-muted);
+}
+
+/* Scrollbars */
+* {
+  scrollbar-color: #23465b #07101b;
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #07101b;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #23465b;
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #36728b;
+}
+
+/* Subtle command-center ambience */
+@keyframes sp-cyan-pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(66, 217, 255, 0.07); }
+  50% { box-shadow: 0 0 19px rgba(66, 217, 255, 0.14); }
+}
+
+.brand-mark,
+.logo-mark {
+  animation: sp-cyan-pulse 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .card,
+  .panel,
+  .stat-card,
+  .metric-card,
+  .chart-card,
+  .query-card,
+  .analytics-card,
+  .table-card,
+  .widget,
+  .section-card {
+    border-radius: 11px;
+  }
+}
+
+/* End StockPilot command-center theme */
+
+/* ==========================================================
+   STOCKPILOT THEME V2 — CYAN / ELECTRIC BLUE / AMBER
+   Stronger overrides for remaining purple accents
+   ========================================================== */
+
+:root {
+  --sp-bg: #050911;
+  --sp-panel: #091522;
+  --sp-panel-alt: #0d1d2c;
+  --sp-border: rgba(57, 207, 255, 0.28);
+  --sp-cyan: #39d5ff;
+  --sp-cyan-bright: #9aeeff;
+  --sp-blue: #168bff;
+  --sp-amber: #ffbf5e;
+  --sp-text: #edf7ff;
+  --sp-muted: #93a9bf;
+}
+
+/* Main command-center surfaces */
+body {
+  background:
+    radial-gradient(ellipse at 8% 10%, rgba(0, 170, 255, 0.12), transparent 35%),
+    radial-gradient(ellipse at 85% 90%, rgba(255, 183, 77, 0.055), transparent 28%),
+    #050911 !important;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #081624 0%, #050b14 100%) !important;
+  border-right: 1px solid rgba(57, 207, 255, 0.28) !important;
+}
+
+.topbar,
+.top-bar,
+.header,
+.dashboard-header {
+  background: rgba(5, 12, 22, 0.94) !important;
+  border-bottom: 1px solid rgba(57, 207, 255, 0.22) !important;
+}
+
+/* Cyan navigation state */
+.sidebar .active,
+.sidebar a.active,
+.sidebar button.active,
+.nav-item.active,
+.nav-link.active,
+[aria-current="page"] {
+  color: #9aeeff !important;
+  background: linear-gradient(100deg, rgba(25, 181, 235, 0.17), rgba(15, 91, 145, 0.07)) !important;
+  border-color: rgba(57, 207, 255, 0.55) !important;
+  box-shadow: inset 3px 0 0 #39d5ff, 0 0 18px rgba(57, 207, 255, 0.06) !important;
+}
+
+/* Override common purple primary / AI controls */
+button.run-button,
+.run-button,
+button.primary-button,
+.primary-button,
+button[type="submit"],
+button[class*="run"],
+button[class*="Run"] {
+  color: #03111c !important;
+  background: linear-gradient(110deg, #39d5ff, #168bff) !important;
+  border: 1px solid rgba(154, 238, 255, 0.8) !important;
+  box-shadow: 0 0 20px rgba(57, 207, 255, 0.17) !important;
+}
+
+button.run-button:hover,
+.run-button:hover,
+button.primary-button:hover,
+.primary-button:hover,
+button[type="submit"]:hover,
+button[class*="run"]:hover,
+button[class*="Run"]:hover {
+  background: linear-gradient(110deg, #9aeeff, #39d5ff) !important;
+  box-shadow: 0 0 27px rgba(57, 207, 255, 0.3) !important;
+  transform: translateY(-1px);
+}
+
+/* AI, voice and microphone controls */
+.ai-icon,
+.ai-badge,
+.powered-pill,
+.ai-powered,
+.voice-button,
+.speak-button,
+button[class*="voice"],
+button[class*="speak"],
+button[class*="mic"] {
+  color: #8cecff !important;
+  background: rgba(16, 112, 151, 0.19) !important;
+  border-color: rgba(57, 207, 255, 0.42) !important;
+  box-shadow: inset 0 0 15px rgba(57, 207, 255, 0.035) !important;
+}
+
+/* Purple icon tiles: replace with a blue holographic finish */
+.icon-box,
+.icon-wrapper,
+.stat-icon,
+.metric-icon,
+.card-icon,
+.feature-icon {
+  background: linear-gradient(145deg, rgba(16, 139, 255, 0.22), rgba(57, 207, 255, 0.09)) !important;
+  border-color: rgba(57, 207, 255, 0.34) !important;
+  color: #8cecff !important;
+}
+
+/* Keep amber as a deliberate secondary highlight */
+.eyebrow,
+.section-label,
+.overline,
+.kicker {
+  color: #66e2ff !important;
+}
+
+.warning,
+.warning-badge,
+.low-stock,
+.status-warning {
+  color: #ffca73 !important;
+  border-color: rgba(255, 191, 94, 0.35) !important;
+}
+
+/* Query suggestions: dark glass with cyan hover */
+.suggestion-chip,
+.query-suggestion,
+.example-query,
+.prompt-chip,
+.try-asking button {
+  color: #c6dcf1 !important;
+  background: rgba(15, 27, 43, 0.92) !important;
+  border-color: rgba(105, 151, 184, 0.23) !important;
+}
+
+.suggestion-chip:hover,
+.query-suggestion:hover,
+.example-query:hover,
+.prompt-chip:hover,
+.try-asking button:hover {
+  color: #9aeeff !important;
+  background: rgba(20, 95, 127, 0.22) !important;
+  border-color: rgba(57, 207, 255, 0.5) !important;
+}
+
+/* Glass panels */
+.card,
+.panel,
+.stat-card,
+.metric-card,
+.chart-card,
+.query-card,
+.analytics-card,
+.table-card,
+.widget,
+.section-card {
+  background: linear-gradient(145deg, rgba(11, 27, 43, 0.97), rgba(6, 15, 26, 0.98)) !important;
+  border-color: rgba(57, 207, 255, 0.2) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.13), inset 0 1px 0 rgba(154, 238, 255, 0.025) !important;
+}
+
+.card:hover,
+.panel:hover,
+.stat-card:hover,
+.metric-card:hover,
+.chart-card:hover,
+.query-card:hover,
+.analytics-card:hover,
+.widget:hover,
+.section-card:hover {
+  border-color: rgba(57, 207, 255, 0.42) !important;
+}
+
+/* Inputs */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #39d5ff !important;
+  box-shadow: 0 0 0 3px rgba(57, 207, 255, 0.1) !important;
+}
+
+/* Restrained cyan headings and metrics */
+.stat-value,
+.metric-value,
+.kpi-value,
+.big-number {
+  color: #9aeeff !important;
+  text-shadow: 0 0 16px rgba(57, 207, 255, 0.13);
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* End StockPilot Theme V2 */
+
+/* ==========================================================
+   STOCKPILOT — RED / GOLD METALLIC COMMAND CENTER
+   Visual styling only. No application logic changes.
+   ========================================================== */
+
+:root {
+  --sp-metal-red: #d92f42;
+  --sp-red-bright: #ff5264;
+  --sp-red-deep: #741827;
+  --sp-metal-gold: #e8b85c;
+  --sp-gold-bright: #ffe1a0;
+  --sp-gold-dark: #8d6426;
+  --sp-cyan: #39d5ff;
+}
+
+/* Metallic red and gold identity mark */
+.brand-mark,
+.logo-mark,
+.logo-icon {
+  background:
+    linear-gradient(135deg, rgba(255, 225, 160, 0.2), transparent 42%),
+    linear-gradient(145deg, #ff5264 0%, #b91f36 48%, #671326 100%) !important;
+  color: #fff4d9 !important;
+  border: 1px solid #e8b85c !important;
+  box-shadow:
+    0 0 0 2px rgba(217, 47, 66, 0.12),
+    0 0 22px rgba(217, 47, 66, 0.19),
+    inset 0 1px 0 rgba(255, 225, 160, 0.45) !important;
+}
+
+/* Gold details around the workspace */
+.sidebar {
+  border-right-color: rgba(232, 184, 92, 0.24) !important;
+}
+
+.topbar,
+.top-bar,
+.header,
+.dashboard-header {
+  border-bottom-color: rgba(232, 184, 92, 0.23) !important;
+}
+
+/* Active navigation: red metallic strip with gold edge */
+.sidebar .active,
+.sidebar a.active,
+.sidebar button.active,
+.nav-item.active,
+.nav-link.active,
+[aria-current="page"] {
+  color: #ffe1a0 !important;
+  background:
+    linear-gradient(100deg, rgba(217, 47, 66, 0.2), rgba(13, 29, 44, 0.7)) !important;
+  border-color: rgba(232, 184, 92, 0.55) !important;
+  box-shadow:
+    inset 3px 0 0 #ff5264,
+    inset 0 0 18px rgba(217, 47, 66, 0.055),
+    0 0 16px rgba(217, 47, 66, 0.055) !important;
+}
+
+/* AI labels and badges: dark titanium with gold trim */
+.ai-icon,
+.ai-badge,
+.powered-pill,
+.ai-powered,
+.sidebar .badge,
+.sidebar [class*="badge"] {
+  color: #ffe1a0 !important;
+  background: linear-gradient(145deg, #3a1820, #151522) !important;
+  border: 1px solid rgba(232, 184, 92, 0.5) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 225, 160, 0.08) !important;
+}
+
+/* Primary query button: metallic red with gold edge */
+.run-button,
+button.run-button,
+.primary-button,
+button.primary-button,
+button[type="submit"],
+button[class*="run"],
+button[class*="Run"] {
+  color: #fff5df !important;
+  background:
+    linear-gradient(135deg, rgba(255, 225, 160, 0.18), transparent 40%),
+    linear-gradient(115deg, #e63b4d 0%, #b51f37 58%, #7b1728 100%) !important;
+  border: 1px solid #e8b85c !important;
+  box-shadow:
+    0 0 18px rgba(217, 47, 66, 0.18),
+    inset 0 1px 0 rgba(255, 225, 160, 0.25) !important;
+}
+
+.run-button:hover,
+button.run-button:hover,
+.primary-button:hover,
+button.primary-button:hover,
+button[type="submit"]:hover,
+button[class*="run"]:hover,
+button[class*="Run"]:hover {
+  color: #fff !important;
+  background: linear-gradient(115deg, #ff5264, #c5263d 65%, #8d192c) !important;
+  border-color: #ffe1a0 !important;
+  box-shadow: 0 0 25px rgba(255, 82, 100, 0.28) !important;
+}
+
+/* Microphone and secondary controls retain cool technology lighting */
+.voice-button,
+.speak-button,
+button[class*="voice"],
+button[class*="speak"],
+button[class*="mic"] {
+  color: #9aeeff !important;
+  background: linear-gradient(145deg, rgba(17, 82, 112, 0.35), rgba(8, 20, 34, 0.95)) !important;
+  border-color: rgba(57, 207, 255, 0.48) !important;
+}
+
+/* Gold hairline details on major dashboard panels */
+.card,
+.panel,
+.stat-card,
+.metric-card,
+.chart-card,
+.query-card,
+.analytics-card,
+.table-card,
+.widget,
+.section-card {
+  position: relative;
+  border-color: rgba(57, 207, 255, 0.22) !important;
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(232, 184, 92, 0.075) !important;
+}
+
+.card:hover,
+.panel:hover,
+.stat-card:hover,
+.metric-card:hover,
+.chart-card:hover,
+.query-card:hover,
+.analytics-card:hover,
+.widget:hover,
+.section-card:hover {
+  border-color: rgba(232, 184, 92, 0.42) !important;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    0 0 16px rgba(217, 47, 66, 0.055),
+    inset 0 1px 0 rgba(255, 225, 160, 0.1) !important;
+}
+
+/* Subtle gold line beneath section labels */
+.eyebrow,
+.section-label,
+.overline,
+.kicker {
+  color: #65dfff !important;
+  text-shadow: 0 0 12px rgba(57, 213, 255, 0.1);
+}
+
+/* Gold accent for warning / low-stock indicators */
+.warning,
+.warning-badge,
+.low-stock,
+.status-warning {
+  color: #ffe1a0 !important;
+  border-color: rgba(232, 184, 92, 0.48) !important;
+}
+
+/* Suggestion chips: dark titanium finish */
+.suggestion-chip,
+.query-suggestion,
+.example-query,
+.prompt-chip,
+.try-asking button {
+  background: linear-gradient(145deg, #18202d, #101622) !important;
+  border-color: rgba(232, 184, 92, 0.2) !important;
+}
+
+.suggestion-chip:hover,
+.query-suggestion:hover,
+.example-query:hover,
+.prompt-chip:hover,
+.try-asking button:hover {
+  color: #ffe1a0 !important;
+  border-color: rgba(232, 184, 92, 0.55) !important;
+  background: linear-gradient(145deg, #321923, #151622) !important;
+}
+
+/* Metallic blue icon tiles with fine gold edging */
+.icon-box,
+.icon-wrapper,
+.stat-icon,
+.metric-icon,
+.card-icon,
+.feature-icon {
+  background: linear-gradient(145deg, #12364c, #0a1b2b) !important;
+  color: #8cecff !important;
+  border: 1px solid rgba(232, 184, 92, 0.22) !important;
+}
+
+/* Table header: dark alloy with cyan text */
+thead,
+thead tr,
+.table-header {
+  background: linear-gradient(90deg, #17202c, #101b28) !important;
+}
+
+th {
+  border-bottom-color: rgba(232, 184, 92, 0.32) !important;
+}
+
+/* Gold focus ring, with readable keyboard navigation */
+:focus-visible {
+  outline-color: #e8b85c !important;
+  outline-offset: 3px;
+}
+
+/* Keep motion subtle */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* End StockPilot red / gold metallic theme */
+
+/* ==========================================================
+   STOCKPILOT OVERVIEW — RED/GOLD METALLIC TILE FINISH
+   Targets dashboard KPIs and query-generated charts.
+   ========================================================== */
+
+/* KPI tiles: black titanium with red metallic lighting */
+.stats-grid.analytics-kpi-grid .stat-card,
+.analytics-kpi-grid .stat-card {
+  background:
+    linear-gradient(135deg, rgba(217, 47, 66, 0.13), transparent 42%),
+    linear-gradient(145deg, #17131a 0%, #0d111b 55%, #080d16 100%) !important;
+  border: 1px solid rgba(232, 184, 92, 0.42) !important;
+  border-top: 2px solid rgba(255, 225, 160, 0.72) !important;
+  border-radius: 12px !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 225, 160, 0.09),
+    inset 0 -1px 0 rgba(217, 47, 66, 0.1),
+    0 8px 25px rgba(0, 0, 0, 0.2),
+    0 0 15px rgba(217, 47, 66, 0.045) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fine metallic highlight along the top edge */
+.analytics-kpi-grid .stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 225, 160, 0.8),
+    rgba(217, 47, 66, 0.7),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.analytics-kpi-grid .stat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 225, 160, 0.7) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 225, 160, 0.12),
+    0 12px 30px rgba(0, 0, 0, 0.26),
+    0 0 22px rgba(217, 47, 66, 0.1) !important;
+}
+
+/* KPI icon tiles: red armor with gold trim */
+.analytics-kpi-grid .stat-icon {
+  color: #ffe1a0 !important;
+  background:
+    linear-gradient(135deg, rgba(255, 225, 160, 0.16), transparent 45%),
+    linear-gradient(145deg, #8d2031, #35151f 75%, #17121b) !important;
+  border: 1px solid rgba(232, 184, 92, 0.65) !important;
+  border-radius: 10px !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 225, 160, 0.22),
+    0 0 15px rgba(217, 47, 66, 0.1) !important;
+}
+
+/* Remove the old green / purple / blue tile color differences */
+.analytics-kpi-grid .stat-icon.green,
+.analytics-kpi-grid .stat-icon.amber,
+.analytics-kpi-grid .stat-icon.violet,
+.analytics-kpi-grid .stat-icon.blue {
+  color: #ffe1a0 !important;
+  background:
+    linear-gradient(135deg, rgba(255, 225, 160, 0.16), transparent 45%),
+    linear-gradient(145deg, #8d2031, #35151f 75%, #17121b) !important;
+  border-color: rgba(232, 184, 92, 0.65) !important;
+}
+
+/* KPI labels and numbers */
+.analytics-kpi-grid .stat-label {
+  color: #e8c98d !important;
+  letter-spacing: 0.11em;
+}
+
+.analytics-kpi-grid .stat-value {
+  color: #ffe1a0 !important;
+  text-shadow: 0 0 15px rgba(232, 184, 92, 0.13) !important;
+}
+
+.analytics-kpi-grid .stat-note {
+  color: #a8a5ac !important;
+}
+
+/* Query-generated chart panels */
+.analytics-chart {
+  background:
+    linear-gradient(135deg, rgba(217, 47, 66, 0.09), transparent 38%),
+    linear-gradient(145deg, #17131a, #0b1019 75%) !important;
+  border: 1px solid rgba(232, 184, 92, 0.38) !important;
+  border-radius: 12px !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 225, 160, 0.07),
+    0 8px 25px rgba(0, 0, 0, 0.16) !important;
+  padding: 18px !important;
+}
+
+.analytics-chart-title strong {
+  color: #ffe1a0 !important;
+}
+
+.analytics-chart-title span {
+  color: #a8b7c7 !important;
+}
+
+/* Revenue and category bars: red metallic fill with gold sheen */
+.revenue-bar-track {
+  background: #211923 !important;
+  border: 1px solid rgba(232, 184, 92, 0.2) !important;
+  border-radius: 5px !important;
+  overflow: hidden;
+}
+
+.revenue-bar-fill {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 225, 160, 0.45) 0%,
+      transparent 38%
+    ),
+    linear-gradient(90deg, #8d1c30 0%, #d92f42 55%, #e8b85c 100%) !important;
+  border-radius: 4px !important;
+  box-shadow:
+    0 0 12px rgba(217, 47, 66, 0.16),
+    inset 0 1px 0 rgba(255, 225, 160, 0.32) !important;
+}
+
+.revenue-bar-label,
+.revenue-bar-row > strong,
+.category-chart-price {
+  color: #f0d9aa !important;
+}
+
+/* Product and result tables: dark alloy with fine gold separators */
+.table-card,
+.analytics-chart + .table-card {
+  border-color: rgba(232, 184, 92, 0.25) !important;
+}
+
+th {
+  color: #ffe1a0 !important;
+  border-bottom-color: rgba(232, 184, 92, 0.38) !important;
+}
+
+tbody tr:hover {
+  background: rgba(217, 47, 66, 0.065) !important;
+}
+
+/* End Overview metallic detailing */
+
+/* STOCKPILOT: UNIFIED RED/GOLD FINISH FOR ALL OVERVIEW KPI TILES */
+
+/* Target both the inventory KPIs and analytics KPIs */
+.stats-grid .stat-card {
+  background:
+    linear-gradient(135deg, rgba(217, 47, 66, 0.13), transparent 43%),
+    linear-gradient(145deg, #17131a 0%, #0d111b 56%, #080d16 100%) !important;
+  border: 1px solid rgba(232, 184, 92, 0.42) !important;
+  border-top: 2px solid rgba(255, 225, 160, 0.72) !important;
+  border-radius: 12px !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 225, 160, 0.09),
+    inset 0 -1px 0 rgba(217, 47, 66, 0.1),
+    0 8px 25px rgba(0, 0, 0, 0.2) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-grid .stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 225, 160, 0.85),
+    rgba(217, 47, 66, 0.7),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.stats-grid .stat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 225, 160, 0.7) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 225, 160, 0.12),
+    0 12px 30px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(217, 47, 66, 0.09) !important;
+}
+
+/* Standardize all KPI icon tiles regardless of tone */
+.stats-grid .stat-icon,
+.stats-grid .stat-icon.blue,
+.stats-grid .stat-icon.amber,
+.stats-grid .stat-icon.violet,
+.stats-grid .stat-icon.green {
+  color: #ffe1a0 !important;
+  background:
+    linear-gradient(135deg, rgba(255, 225, 160, 0.16), transparent 45%),
+    linear-gradient(145deg, #8d2031, #35151f 75%, #17121b) !important;
+  border: 1px solid rgba(232, 184, 92, 0.65) !important;
+  border-radius: 10px !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 225, 160, 0.22),
+    0 0 15px rgba(217, 47, 66, 0.1) !important;
+}
+
+/* Gold numbers and warm metallic labels on all eight tiles */
+.stats-grid .stat-label {
+  color: #e8c98d !important;
+  letter-spacing: 0.1em;
+}
+
+.stats-grid .stat-value {
+  color: #ffe1a0 !important;
+  text-shadow: 0 0 15px rgba(232, 184, 92, 0.13) !important;
+}
+
+.stats-grid .stat-note {
+  color: #b9b0a8 !important;
+}
+
+/* END unified KPI styling */

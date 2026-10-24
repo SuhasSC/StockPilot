@@ -1,0 +1,85 @@
+﻿[
+    {
+        "collection":  "inventory",
+        "description":  "Find products that need restocking",
+        "filter":  {
+                       "$expr":  {
+                                     "$lte":  [
+                                                  "$stock_quantity",
+                                                  "$reorder_level"
+                                              ]
+                                 }
+                   },
+        "question":  "Which products are low in stock?"
+    },
+    {
+        "collection":  "inventory",
+        "description":  "Identify inventory requiring replenishment",
+        "filter":  {
+                       "$expr":  {
+                                     "$lte":  [
+                                                  "$stock_quantity",
+                                                  "$reorder_level"
+                                              ]
+                                 }
+                   },
+        "question":  "Show inventory below reorder level"
+    },
+    {
+        "collection":  "products",
+        "description":  "Find expensive products",
+        "filter":  {
+                       "price":  {
+                                     "$gt":  1000
+                                 }
+                   },
+        "question":  "Which products cost more than 1000?"
+    },
+    {
+        "collection":  "products",
+        "description":  "Find lower-priced products",
+        "filter":  {
+                       "price":  {
+                                     "$lt":  2000
+                                 }
+                   },
+        "question":  "Show products priced below 2000"
+    },
+    {
+        "collection":  "products",
+        "description":  "Retrieve all products",
+        "filter":  {
+
+                   },
+        "question":  "List all products"
+    },
+    {
+        "collection":  "products",
+        "description":  "Filter products by category",
+        "filter":  {
+                       "category":  "Electronics"
+                   },
+        "question":  "Find products in the Electronics category"
+    },
+    {
+        "collection":  "products",
+        "description":  "Retrieve electronic products",
+        "filter":  {
+                       "category":  "Electronics"
+                   },
+        "question":  "Show electronic items"
+    },
+    {
+        "collection":  "inventory",
+        "description":  "Find items at or below reorder level",
+        "filter":  {
+                       "$expr":  {
+                                     "$lte":  [
+                                                  "$stock_quantity",
+                                                  "$reorder_level"
+                                              ]
+                                 }
+                   },
+        "question":  "Which items have insufficient stock?"
+    }
+]
